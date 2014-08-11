@@ -1,0 +1,12 @@
+<ul class="rounded">
+  <% @expenditures.each do |expenditure| %>
+    <li>
+      <%= "#{expenditure.item} - #{expenditure.date_of_purchase}" %>
+    </li>
+  <% end %>
+</ul>
+<ul class="rounded">
+  <li class="arrow">
+    <%= link_to 'Create Expenditure', :newEx %>
+  </li>
+</ul>

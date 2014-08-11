@@ -1,0 +1,33 @@
+<%= form_for(@expenditure) do |f| %>
+  <% if @expenditure.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@expenditure.errors.count, "error") %> prohibited this expenditure from being saved:</h2>
+
+      <ul>
+      <% @expenditure.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <ul class="rounded">
+    <li>
+      <%= f.text_field :item, :placeholder => "Name of Item" %>
+    </li>
+  </ul>
+  <ul class="rounded">
+    <li>
+      <%= f.text_field :cost, :placeholder => "Cost of Item" %>
+    </li>
+  </ul>
+  <ul class="rounded">
+    <li>
+      <%= f.text_field :date_of_purchase, :placeholder => "Purchase Date" %>
+    </li>
+  </ul>
+
+  <div style="text-align: center">
+    <%= f.submit 'Create Expenditure', :class => "submit whiteButton", :style => " width: 50%; margin-left:auto; margin-right:auto;" %>
+  </div>
+<% end %>

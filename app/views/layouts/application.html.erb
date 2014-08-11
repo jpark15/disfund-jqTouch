@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>DFA-jQTouch</title>
+    <link rel="stylesheet" href="jqt/themes/css/jqtouch.css" title="jQTouch">
+    <script src="jqt/src/lib/zepto.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="jqt/src/jqtouch.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="jqt/extensions/jqt.themeswitcher.min.js" type="application/x-javascript" charset="utf-8"></script>
+    <script src="application.js"></script>
+  </head>
+
+  <body>
+    <div id="jqt">
+      <div id="home" class="current">
+        <div class="toolbar">
+          <h1>DFA Lite App</h1>
+          <%= link_to "Home", home_path, :class => "button" %>
+        </div>
+        <div class="scroll">
+          <%= yield %>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
